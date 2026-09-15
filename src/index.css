@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+@theme {
+  --color-vortex-bg: #2b2c34;
+  --color-vortex-text: #fffffe;
+  --color-vortex-secondary: #d1d1e9;
+  --color-vortex-primary: #6246ea;
+  --color-vortex-tertiary: #e45858;
+  --color-vortex-dark: #090a0f;
+  --color-vortex-space: #1b2735;
+
+  --font-orbitron: 'Orbitron', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-space: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Base Body Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-space, 'Space Grotesk', sans-serif);
+  background-color: #090a0f;
+  color: #fffffe;
+  overflow-x: hidden;
+}
+
+/* Custom Cyberpunk Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b2c34;
+  border-radius: 4px;
+  border: 1px solid rgba(98, 70, 234, 0.4);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6246ea;
+  box-shadow: 0 0 10px rgba(98, 70, 234, 0.8);
+}
+
+/* Cyber Glow Effects */
+.glow-text {
+  text-shadow: 0 0 10px rgba(98, 70, 234, 0.8), 0 0 25px rgba(98, 70, 234, 0.5), 0 0 45px rgba(98, 70, 234, 0.25);
+}
+
+.glow-text-red {
+  text-shadow: 0 0 10px rgba(228, 88, 88, 0.8), 0 0 25px rgba(228, 88, 88, 0.5);
+}
+
+.glow-image {
+  filter: drop-shadow(0 0 8px rgba(98, 70, 234, 0.6)) drop-shadow(0 0 20px rgba(98, 70, 234, 0.35));
+}
+
+.glow-card {
+  box-shadow: 0 0 25px rgba(98, 70, 234, 0.15);
+}
+
+.glow-card:hover {
+  box-shadow: 0 0 35px rgba(98, 70, 234, 0.4), 0 0 15px rgba(98, 70, 234, 0.2);
+}
+
+/* Float Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.5deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+/* Cyber Grid Pattern */
+.bg-cyber-grid {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(98, 70, 234, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(98, 70, 234, 0.05) 1px, transparent 1px);
+}
+
+/* =========================================================
+   PARALLAX STARRY BACKGROUND (Multiple Box-Shadows)
+   1px, 2px, and 3px stars animated infinitely upwards
+   ========================================================= */
+
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow:
+    145px 320px #fff, 380px 890px #fff, 510px 1420px #d1d1e9, 720px 240px #fff,
+    890px 1650px #fff, 1040px 620px #d1d1e9, 1210px 1150px #fff, 1380px 410px #fff,
+    1520px 1780px #fff, 1690px 930px #d1d1e9, 1840px 1310px #fff, 2020px 540px #fff,
+    2190px 1860px #d1d1e9, 2340px 790px #fff, 2480px 1230px #fff, 310px 1910px #fff,
+    490px 670px #d1d1e9, 680px 1180px #fff, 850px 430px #fff, 1010px 1540px #fff,
+    1170px 880px #d1d1e9, 1340px 1970px #fff, 1490px 120px #fff, 1660px 1450px #fff,
+    1810px 330px #d1d1e9, 1980px 1620px #fff, 2140px 970px #fff, 2290px 1400px #fff,
+    95px 1250px #d1d1e9, 260px 480px #fff, 430px 1600px #fff, 610px 830px #fff,
+    780px 1920px #d1d1e9, 950px 310px #fff, 1120px 1290px #fff, 1290px 740px #fff,
+    1460px 1810px #d1d1e9, 1630px 590px #fff, 1790px 1130px #fff, 1960px 220px #fff,
+    2120px 1690px #d1d1e9, 2270px 650px #fff, 2440px 1510px #fff, 180px 770px #fff,
+    350px 1360px #fff, 530px 210px #d1d1e9, 700px 1740px #fff, 870px 960px #fff,
+    1050px 1890px #fff, 1220px 470px #d1d1e9, 1390px 1380px #fff, 1560px 810px #fff,
+    1730px 1940px #fff, 1900px 380px #d1d1e9, 2070px 1260px #fff, 2230px 1720px #fff;
+  animation: animStar 50s linear infinite;
+}
+
+#stars:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow:
+    145px 320px #fff, 380px 890px #fff, 510px 1420px #d1d1e9, 720px 240px #fff,
+    890px 1650px #fff, 1040px 620px #d1d1e9, 1210px 1150px #fff, 1380px 410px #fff,
+    1520px 1780px #fff, 1690px 930px #d1d1e9, 1840px 1310px #fff, 2020px 540px #fff,
+    2190px 1860px #d1d1e9, 2340px 790px #fff, 2480px 1230px #fff, 310px 1910px #fff,
+    490px 670px #d1d1e9, 680px 1180px #fff, 850px 430px #fff, 1010px 1540px #fff,
+    1170px 880px #d1d1e9, 1340px 1970px #fff, 1490px 120px #fff, 1660px 1450px #fff,
+    1810px 330px #d1d1e9, 1980px 1620px #fff, 2140px 970px #fff, 2290px 1400px #fff,
+    95px 1250px #d1d1e9, 260px 480px #fff, 430px 1600px #fff, 610px 830px #fff,
+    780px 1920px #d1d1e9, 950px 310px #fff, 1120px 1290px #fff, 1290px 740px #fff,
+    1460px 1810px #d1d1e9, 1630px 590px #fff, 1790px 1130px #fff, 1960px 220px #fff,
+    2120px 1690px #d1d1e9, 2270px 650px #fff, 2440px 1510px #fff, 180px 770px #fff,
+    350px 1360px #fff, 530px 210px #d1d1e9, 700px 1740px #fff, 870px 960px #fff,
+    1050px 1890px #fff, 1220px 470px #d1d1e9, 1390px 1380px #fff, 1560px 810px #fff,
+    1730px 1940px #fff, 1900px 380px #d1d1e9, 2070px 1260px #fff, 2230px 1720px #fff;
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    210px 540px #fff, 450px 1260px #d1d1e9, 680px 310px #fff, 910px 1740px #fff,
+    1150px 820px #d1d1e9, 1390px 1490px #fff, 1620px 270px #fff, 1850px 1120px #d1d1e9,
+    2080px 1680px #fff, 2310px 590px #fff, 340px 1850px #d1d1e9, 580px 920px #fff,
+    810px 1410px #fff, 1040px 190px #d1d1e9, 1270px 1630px #fff, 1510px 730px #fff,
+    1740px 1380px #d1d1e9, 1970px 460px #fff, 2200px 1820px #fff, 2430px 980px #d1d1e9,
+    160px 1050px #fff, 390px 390px #d1d1e9, 620px 1580px #fff, 860px 690px #fff,
+    1090px 1210px #d1d1e9, 1320px 1890px #fff, 1550px 420px #fff, 1780px 1540px #d1d1e9;
+  animation: animStar 100s linear infinite;
+}
+
+#stars2:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    210px 540px #fff, 450px 1260px #d1d1e9, 680px 310px #fff, 910px 1740px #fff,
+    1150px 820px #d1d1e9, 1390px 1490px #fff, 1620px 270px #fff, 1850px 1120px #d1d1e9,
+    2080px 1680px #fff, 2310px 590px #fff, 340px 1850px #d1d1e9, 580px 920px #fff,
+    810px 1410px #fff, 1040px 190px #d1d1e9, 1270px 1630px #fff, 1510px 730px #fff,
+    1740px 1380px #d1d1e9, 1970px 460px #fff, 2200px 1820px #fff, 2430px 980px #d1d1e9,
+    160px 1050px #fff, 390px 390px #d1d1e9, 620px 1580px #fff, 860px 690px #fff,
+    1090px 1210px #d1d1e9, 1320px 1890px #fff, 1550px 420px #fff, 1780px 1540px #d1d1e9;
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow:
+    320px 720px rgba(255,255,255,0.9), 670px 1450px rgba(209,209,233,0.85),
+    1020px 340px rgba(255,255,255,0.9), 1370px 1820px rgba(98,70,234,0.9),
+    1720px 610px rgba(255,255,255,0.9), 2070px 1290px rgba(209,209,233,0.85),
+    2420px 430px rgba(255,255,255,0.9), 230px 1620px rgba(255,255,255,0.9),
+    580px 880px rgba(98,70,234,0.8), 930px 1710px rgba(255,255,255,0.9),
+    1280px 240px rgba(209,209,233,0.85), 1630px 1190px rgba(255,255,255,0.9),
+    1980px 1770px rgba(255,255,255,0.9), 2330px 850px rgba(98,70,234,0.8);
+  animation: animStar 150s linear infinite;
+}
+
+#stars3:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow:
+    320px 720px rgba(255,255,255,0.9), 670px 1450px rgba(209,209,233,0.85),
+    1020px 340px rgba(255,255,255,0.9), 1370px 1820px rgba(98,70,234,0.9),
+    1720px 610px rgba(255,255,255,0.9), 2070px 1290px rgba(209,209,233,0.85),
+    2420px 430px rgba(255,255,255,0.9), 230px 1620px rgba(255,255,255,0.9),
+    580px 880px rgba(98,70,234,0.8), 930px 1710px rgba(255,255,255,0.9),
+    1280px 240px rgba(209,209,233,0.85), 1630px 1190px rgba(255,255,255,0.9),
+    1980px 1770px rgba(255,255,255,0.9), 2330px 850px rgba(98,70,234,0.8);
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
