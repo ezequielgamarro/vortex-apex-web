@@ -77,19 +77,19 @@ export default function Visualizer() {
               <div className="relative rounded-2xl overflow-hidden border-2 border-[#6246ea] shadow-[0_0_40px_rgba(98,70,234,0.4)] bg-[#2b2c34]/70 backdrop-blur-xl">
 
                 {/* Barra de ventana */}
-                <div className="px-4 py-3 bg-[#090a0f]/80 border-b border-[#6246ea]/40 flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    <span className="w-3 h-3 rounded-full bg-[#e45858] inline-block shadow-[0_0_8px_rgba(228,88,88,0.8)]"></span>
-                    <span className="w-3 h-3 rounded-full bg-yellow-400 inline-block"></span>
-                    <span className="w-3 h-3 rounded-full bg-emerald-400 inline-block shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
+                <div className="px-3 sm:px-4 py-2.5 sm:py-3 bg-[#090a0f]/80 border-b border-[#6246ea]/40 flex items-center justify-between gap-2 overflow-hidden">
+                  <div className="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
+                    <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#e45858] inline-block shadow-[0_0_8px_rgba(228,88,88,0.8)]"></span>
+                    <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-400 inline-block"></span>
+                    <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-400 inline-block shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs font-['Orbitron'] font-bold text-[#fffffe] tracking-wider uppercase">
-                    <i className="fas fa-desktop text-[#6246ea]"></i>
-                    <span>{screen.tag}</span>
-                    <span className="text-[10px] text-[#6246ea] hidden sm:inline-block">• {screen.badge}</span>
+                  <div className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-['Orbitron'] font-bold text-[#fffffe] tracking-wider uppercase truncate min-w-0">
+                    <i className="fas fa-desktop text-[#6246ea] shrink-0"></i>
+                    <span className="truncate">{screen.tag}</span>
+                    <span className="text-[10px] text-[#6246ea] hidden md:inline-block shrink-0">• {screen.badge}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-[10px] font-mono text-emerald-400">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <div className="flex items-center gap-1.5 text-[9px] sm:text-[10px] font-mono text-emerald-400 shrink-0">
+                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                     <span className="hidden sm:inline">{screen.status}</span>
                   </div>
                 </div>
@@ -105,9 +105,9 @@ export default function Visualizer() {
                 </div>
 
                 {/* Barra inferior de estado */}
-                <div className="px-4 py-2 bg-[#090a0f]/70 border-t border-[#6246ea]/20 flex items-center justify-between text-[10px] font-mono text-[#d1d1e9]/60">
-                  <span><i className="fas fa-check-circle text-[#6246ea] mr-1"></i> {screen.footLeft}</span>
-                  <span><i className="fas fa-wifi-slash text-emerald-400 mr-1"></i> {screen.footRight}</span>
+                <div className="px-3 sm:px-4 py-2 bg-[#090a0f]/70 border-t border-[#6246ea]/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1 text-[10px] font-mono text-[#d1d1e9]/60">
+                  <span className="truncate"><i className="fas fa-check-circle text-[#6246ea] mr-1"></i> {screen.footLeft}</span>
+                  <span className="truncate"><i className="fas fa-wifi-slash text-emerald-400 mr-1"></i> {screen.footRight}</span>
                 </div>
               </div>
             </div>

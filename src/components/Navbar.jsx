@@ -31,11 +31,11 @@ export default function Navbar({ onOpenDemo }) {
         <div className="flex items-center justify-between">
           
           {/* Logo a la izquierda */}
-          <a href="#" className="flex items-center group">
+          <a href="#" className="flex items-center shrink min-w-0 group">
             <img
               src="/img/vortex apex logo modo oscuro dentro del programa.webp"
               alt="Vortex Apex"
-              className="h-10 sm:h-11 w-auto glow-image group-hover:scale-105 transition-transform duration-300 object-contain"
+              className="h-8 sm:h-10 md:h-11 w-auto max-w-[140px] sm:max-w-none glow-image group-hover:scale-105 transition-transform duration-300 object-contain shrink-0"
             />
           </a>
 
@@ -53,8 +53,8 @@ export default function Navbar({ onOpenDemo }) {
             ))}
           </div>
 
-          {/* Botón [ Solicitar Demo ] a la derecha */}
-          <div className="hidden md:flex items-center">
+          {/* Botón [ Solicitar Demo ] a la derecha (Desktop) */}
+          <div className="hidden md:flex items-center shrink-0">
             <a
               href="https://instagram.com/vortexapex.arg"
               target="_blank"
@@ -67,7 +67,7 @@ export default function Navbar({ onOpenDemo }) {
               
               <button
                 type="button"
-                className="relative px-6 py-2.5 text-xs lg:text-sm font-bold font-['Orbitron'] tracking-widest uppercase text-[#fffffe] bg-[#2b2c34]/90 border border-[#6246ea] rounded-lg hover:border-[#fffffe] transition-all duration-300 shadow-[0_0_15px_rgba(98,70,234,0.4)] group-hover:shadow-[0_0_25px_rgba(98,70,234,0.8)] cursor-pointer"
+                className="relative px-6 py-2.5 text-xs lg:text-sm font-bold font-['Orbitron'] tracking-widest uppercase text-[#fffffe] bg-[#2b2c34]/90 border border-[#6246ea] rounded-lg hover:border-[#fffffe] transition-all duration-300 shadow-[0_0_15px_rgba(98,70,234,0.4)] group-hover:shadow-[0_0_25px_rgba(98,70,234,0.8)] cursor-pointer whitespace-nowrap"
               >
                 [ Solicitar Demo ]
               </button>
@@ -75,21 +75,22 @@ export default function Navbar({ onOpenDemo }) {
           </div>
 
           {/* Botón Hamburguesa Móvil */}
-          <div className="flex md:hidden items-center gap-3">
+          <div className="flex md:hidden items-center gap-2 sm:gap-3 shrink-0 ml-auto">
             <a
               href="https://instagram.com/vortexapex.arg"
               target="_blank"
               rel="noreferrer"
-              className="px-3 py-1.5 text-xs font-['Orbitron'] font-bold text-[#fffffe] bg-[#6246ea]/30 border border-[#6246ea] rounded shadow-[0_0_10px_rgba(98,70,234,0.5)]"
+              onClick={onOpenDemo}
+              className="relative px-2.5 sm:px-3 py-1.5 text-[11px] sm:text-xs font-['Orbitron'] font-bold text-[#fffffe] bg-[#6246ea] border border-[#6246ea] rounded-lg shadow-[0_0_12px_rgba(98,70,234,0.6)] whitespace-nowrap shrink-0 hover:bg-[#6246ea]/90 transition-all cursor-pointer"
             >
               [ Demo ]
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-[#d1d1e9] hover:text-[#fffffe] p-2 focus:outline-none"
+              className="text-[#d1d1e9] hover:text-[#fffffe] p-1.5 focus:outline-none shrink-0"
               aria-label="Alternar Menú"
             >
-              <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
+              <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'} text-lg sm:text-xl`}></i>
             </button>
           </div>
 
