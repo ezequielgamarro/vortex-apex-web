@@ -29,15 +29,15 @@ export default function Visualizer() {
       footRight: "Búsqueda instantánea en milisegundos",
     },
     {
-      id: "stock-inventario",
-      tag: "CONTROL DE INVENTARIO · STOCK EN TIEMPO REAL",
-      badge: "STOCK EN VIVO",
-      status: "STOCK_OK",
+      id: "historial-ventas",
+      tag: "HISTORIAL DE VENTAS · REGISTRO EN TIEMPO REAL",
+      badge: "VENTAS EN VIVO",
+      status: "VENTAS_OK",
       statusColor: "emerald-400",
       img: "/img/6d135ee686e8b22b7f7b02120e7f44e0_1_1789573512_5154.png",
-      alt: "Vortex Apex – Control de inventario y alertas de stock",
-      footLeft: "Alertas tempranas de quiebre de stock",
-      footRight: "Entradas y salidas registradas",
+      alt: "Vortex Apex – Historial de ventas y registro de transacciones",
+      footLeft: "Registro detallado de tickets y métodos de pago",
+      footRight: "Totales diarios y consultas instantáneas",
     },
   ];
 
