@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" fill="none">
+<defs><radialGradient id="sh"><stop offset="0" stop-color="#000" stop-opacity=".5"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d1e27"/><stop offset="1" stop-color="#15161d"/></linearGradient></defs>
+<ellipse cx="240" cy="260" rx="200" ry="14" fill="url(#sh)"/><ellipse cx="240" cy="260" rx="170" ry="9" fill="#000" opacity=".35"/>
+<path d="M120 112l16-10h244l-16 10z" fill="#1d1e27" stroke="#3a3b47" stroke-width="1.5" transform="translate(0 4)"/>
+<path d="M376 116l16-10v124l-16 12z" fill="#101118" stroke="#2b2c34" stroke-width="1.5" transform="translate(0 4)"/>
+<rect x="120" y="116" width="256" height="136" rx="10" fill="url(#b)" stroke="#3a3b47" stroke-width="2"/>
+<path d="M120 126q0-10 10-10h120l-60 136h-70z" fill="#fffffe" opacity=".05"/>
+<g fill="#101118" stroke="#3a3b47" stroke-width="1.5"><rect x="150" y="130" width="22" height="26" rx="3"/><rect x="178" y="130" width="22" height="26" rx="3"/><rect x="206" y="130" width="22" height="26" rx="3"/><rect x="234" y="130" width="22" height="26" rx="3"/></g>
+<g fill="#9a9bb3"><circle cx="161" cy="143" r="5"/><circle cx="189" cy="143" r="5"/><circle cx="217" cy="143" r="5"/><circle cx="245" cy="143" r="5"/></g>
+<g stroke="#101118" stroke-width="2"><path d="M155 143h12M183 143h12M211 143h12M239 143h12"/></g>
+<rect x="144" y="172" width="118" height="44" rx="4" fill="#0c0d13" stroke="#2b2c34" stroke-width="1.5"/>
+<g fill="#9a9bb3"><rect x="154" y="184" width="14" height="3" rx="1.5"/><rect x="178" y="184" width="14" height="3" rx="1.5"/><rect x="202" y="184" width="30" height="3" rx="1.5"/><rect x="154" y="198" width="40" height="3" rx="1.5"/></g>
+<circle cx="316" cy="196" r="5" fill="#6246ea"/><circle cx="336" cy="196" r="5" fill="#2b2c34"/>
+<path d="M120 150h-14v72h14" fill="#1d1e27" stroke="#3a3b47" stroke-width="2"/>
+<path d="M106 150h-34q-8 0-8 8v56q0 8 8 8h34z" fill="#101118" stroke="#2b2c34" stroke-width="1.5"/>
+<rect x="38" y="160" width="46" height="52" rx="3" fill="#2b2c34" stroke="#3a3b47" stroke-width="2"/>
+<path d="M84 166h-34v40h34z" fill="#0c0d13" stroke="#3a3b47" stroke-width="1.5"/>
+<rect x="56" y="176" width="8" height="8" fill="#101118"/><rect x="56" y="190" width="8" height="8" fill="#101118"/>
+<path d="M38 168q0-8 8-8h30l-30 50z" fill="#fffffe" opacity=".08"/>
+</svg>
