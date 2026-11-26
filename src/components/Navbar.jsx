@@ -34,7 +34,7 @@ export default function Navbar({ actual }) {
           <Logo369 className="w-[10.5rem] sm:w-[12.5rem]" />
         </a>
 
-        <ul className="hidden h-full items-stretch gap-8 lg:flex">
+        <ul className="hidden h-full items-stretch gap-8 xl:flex">
           {enlaces.map((e) => {
             const activo = e.clave === actual;
             return (
@@ -55,11 +55,11 @@ export default function Navbar({ actual }) {
 
         <div className="flex items-center gap-2">
           <a href={PAGINAS.contacto.href} className="btn btn-primary hidden !min-h-[2.6rem] !px-4 !text-[0.95rem] sm:inline-flex">
-            Agendar demo
+            Agendar reunión
           </a>
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-paper lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-paper xl:hidden"
             aria-expanded={abierto}
             aria-controls="menu-movil"
             aria-label={abierto ? 'Cerrar menú' : 'Abrir menú'}
@@ -70,7 +70,7 @@ export default function Navbar({ actual }) {
         </div>
       </nav>
 
-      <div id="menu-movil" hidden={!abierto} className="border-t border-line bg-ink lg:hidden">
+      <div id="menu-movil" hidden={!abierto} className="border-t border-line bg-ink xl:hidden">
         <ul className="mx-auto max-w-[90rem] px-5 py-4 sm:px-8">
           {enlaces.map((e) => {
             const activo = e.clave === actual;
@@ -91,7 +91,7 @@ export default function Navbar({ actual }) {
           })}
           <li className="pt-5 pb-2">
             <a href={PAGINAS.contacto.href} className="btn btn-primary w-full">
-              Agendar demo
+              Agendar reunión
             </a>
           </li>
         </ul>

@@ -5,7 +5,7 @@ import { IconArrowRight } from './Icons';
 const caminos = [
   {
     titulo: 'Quiero ver el software',
-    texto: 'Agende una demostración con las unidades y la forma de trabajar de su gasera.',
+    texto: 'Agende una reunión y le mostramos cómo funciona con las unidades y la forma de trabajar de su gasera.',
     accion: 'Llenar el formulario',
     href: '#contacto',
   },

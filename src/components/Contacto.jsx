@@ -16,7 +16,7 @@ function validar(d) {
 
 function armarMensaje(d) {
   const lineas = [
-    'Hola, me interesa una demostración de Vortex Apex 369.',
+    'Hola, quiero agendar una reunión para conocer Vortex Apex 369.',
     '',
     `Nombre: ${d.nombre.trim()}`,
     `Gasera: ${d.gasera.trim()}`,
@@ -79,10 +79,10 @@ export default function Contacto({ esPagina = false }) {
     <section id="contacto" className="relative">
       <div className="mx-auto grid max-w-[90rem] gap-14 px-5 py-24 sm:px-8 lg:grid-cols-12 lg:gap-x-12 lg:px-12 lg:py-32">
         <div className="lg:col-span-5">
-          <Titulo className={esPagina ? 'display-xl' : 'display-lg'}>Agende una demostración</Titulo>
+          <Titulo className={esPagina ? 'display-xl' : 'display-lg'}>Agende una reunión</Titulo>
           <p className="lead mt-6">
-            Le mostramos Vortex Apex 369 funcionando con las unidades y la forma de trabajar de su gasera. Deje sus datos
-            y le escribimos por WhatsApp para agendar la demostración.
+            En una reunión le mostramos cómo funciona Vortex Apex 369 con las unidades y la forma de trabajar de su
+            gasera. Deje sus datos y le escribimos por WhatsApp para agendarla.
           </p>
 
           <dl className="mt-12 grid gap-px border-y border-line bg-line">
@@ -178,7 +178,7 @@ export default function Contacto({ esPagina = false }) {
               <div className="flex flex-col gap-4 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
                 <p className="text-sm text-mist-dim">Al enviar se abre WhatsApp con su mensaje ya escrito.</p>
                 <button type="submit" className="btn btn-primary">
-                  Agendar demostración <IconArrowRight />
+                  Agendar reunión <IconArrowRight />
                 </button>
               </div>
             </form>
