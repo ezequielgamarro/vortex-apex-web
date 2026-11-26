@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="md:col-span-5">
           <Logo369 className="w-[13rem]" />
           <p className="mt-5 max-w-[24rem] text-[0.95rem] text-mist-dim">
-            Software de gestión integral para gaseras de México: taller de pipas, personal, plantas y contabilidad.
+            Software de gestión integral para gaseras de México: taller de pipas, sellos de seguridad y plantas.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function Footer() {
 
       <div className="border-t border-line">
         <p className="mx-auto max-w-[90rem] px-5 py-6 text-sm text-mist-dim sm:px-8 lg:px-12">
-          © {anio} Vortex Apex 369. Las pantallas muestran datos de demostración.
+          © {anio} Vortex Apex 369. Las pantallas muestran datos de ejemplo.
         </p>
       </div>
     </footer>

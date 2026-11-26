@@ -1,4 +1,4 @@
 {
-  "prompt": "Origen: captura de pantalla real de la app Vortex Apex Pipas (pantalla \"reportes\", recortada a eficiencia del taller y por mecánico), ejecutada en una copia local con Supabase local y datos ficticios (\"Gas Demo del Bajío\"). Logo del cliente reemplazado por Vortex Apex 369 en la copia. Convertida a WebP con ffmpeg. No generada por IA.\n",
-  "createdAt": "2026-11-18T15:10:09.256Z"
+  "prompt": "Origen: captura de pantalla real de la app Vortex Apex 369, módulo taller (pantalla \"reportes\"), ejecutada en una copia local con Supabase local aislado y datos ficticios (\"Gas Demo del Bajío\"). La marca del cliente se reemplazó por la de Vortex Apex 369 en la copia. Convertida a WebP con OpenCV. No generada por IA.\n",
+  "createdAt": "2026-11-26T20:30:00.000Z"
 }
