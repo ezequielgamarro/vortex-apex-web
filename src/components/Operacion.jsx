@@ -6,13 +6,13 @@ import { IconArrowRight } from './Icons';
 const escenas = [
   {
     titulo: 'Plantas de almacenamiento',
-    texto: 'El área Plantas llevará la operación diaria de sus plantas dentro de la misma plataforma.',
+    texto: 'Plantas: carga y salida de cada pipa, papeleta, revisión del encargado, liquidación en caja y descarga de transporte.',
     foto: '/img/fotos/planta.webp',
     alt: 'Vista aérea de una planta de almacenamiento de gas LP con cuatro tanques y pipas en el andén de carga',
-    ancho: 1600,
-    alto: 854,
-    estado: 'Próximamente',
-    enlace: { texto: 'Ver la plataforma', href: PAGINAS.plataforma.href },
+    ancho: 1896,
+    alto: 1010,
+    estado: 'Disponible',
+    enlace: { texto: 'Conocer Plantas', href: PAGINAS.plantas.href },
   },
   {
     titulo: 'Pipas en ruta',
@@ -30,7 +30,7 @@ const escenas = [
     foto: '/img/fotos/taller.webp',
     alt: 'Taller con un tanque de gas LP sobre su estructura y pipas en mantenimiento al fondo',
     ancho: 1400,
-    alto: 948,
+    alto: 1235,
     estado: 'Disponible',
     enlace: { texto: 'Conocer Taller de Pipas', href: PAGINAS.taller.href },
   },

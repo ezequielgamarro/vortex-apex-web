@@ -5,27 +5,7 @@ import Estado from '../components/Estado';
 import { BrowserFrame } from '../components/Frames';
 import { IconArrowRight } from '../components/Icons';
 import { PAGINAS } from '../config/paginas';
-
-const areas = [
-  {
-    nombre: 'Taller de pipas',
-    disponible: true,
-    texto:
-      'Mantenimiento de la flota de pipas de principio a fin: orden de ingreso con firmas, tablero en tiempo real, refacciones contra inventario, cierre con firma e historial de cada unidad.',
-  },
-  {
-    nombre: 'Personal',
-    texto: 'Expedientes, documentos y control del personal de la gasera.',
-  },
-  {
-    nombre: 'Plantas',
-    texto: 'Operación diaria de las plantas de almacenamiento.',
-  },
-  {
-    nombre: 'Contabilidad',
-    texto: 'Costos del taller y de la operación, sin volver a capturarlos.',
-  },
-];
+import { MODULOS } from '../data/modulos';
 
 const base = [
   { titulo: 'Un solo inicio de sesión', texto: 'Cada persona entra con su usuario a todas las áreas que le corresponden.' },
@@ -38,17 +18,17 @@ export default function PaginaPlataforma() {
   return (
     <Layout actual="plataforma">
       <CabeceraPagina pagina="plataforma" titulo="Una plataforma para toda la gasera">
-        Vortex Apex 369 reúne el taller de pipas, el personal, las plantas y la contabilidad en un solo sistema. Taller
-        de Pipas ya está en operación; las demás áreas se suman sobre la misma base.
+        Vortex Apex 369 reúne el taller de pipas, los sellos, las plantas, el personal y la contabilidad en un solo
+        sistema. Taller de Pipas, Sellos y Plantas ya están en operación; las demás áreas se suman sobre la misma base.
       </CabeceraPagina>
 
       <section aria-labelledby="areas" className="border-b border-line">
         <div className="mx-auto max-w-[90rem] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
           <h2 id="areas" className="display-lg">
-            Las cuatro áreas
+            Un módulo por área
           </h2>
           <ul className="mt-12 border-t border-line">
-            {areas.map((a) => (
+            {MODULOS.map((a) => (
               <li key={a.nombre} className="border-b border-line py-10 lg:py-12">
                 <div className="grid gap-6 lg:grid-cols-12 lg:gap-x-12">
                   <div className={a.disponible ? 'lg:col-span-5' : 'lg:col-span-12'}>
@@ -59,20 +39,16 @@ export default function PaginaPlataforma() {
                     <p className="mt-4 max-w-[38rem]">{a.texto}</p>
                     {a.disponible && (
                       <a
-                        href={PAGINAS.taller.href}
+                        href={PAGINAS[a.pagina].href}
                         className="mt-8 inline-flex items-center gap-2 font-semibold text-paper no-underline hover:text-violet-hover"
                       >
-                        Conocer Taller de Pipas <IconArrowRight />
+                        {a.enlace} <IconArrowRight />
                       </a>
                     )}
                   </div>
-                  {a.disponible && (
+                  {a.captura && (
                     <div className="lg:col-span-7">
-                      <BrowserFrame
-                        src="/img/pipas/tablero.webp"
-                        alt="Tablero de Taller de Pipas con órdenes en espera, en taller, terminadas, en taller externo y canceladas"
-                        label="Taller de Pipas · Tablero"
-                      />
+                      <BrowserFrame src={a.captura.src} alt={a.captura.alt} label={a.captura.label} />
                     </div>
                   )}
                 </div>

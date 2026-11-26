@@ -13,6 +13,8 @@ export default defineConfig({
         inicio: resolve(raiz, 'index.html'),
         plataforma: resolve(raiz, 'plataforma.html'),
         taller: resolve(raiz, 'taller-de-pipas.html'),
+        sellos: resolve(raiz, 'sellos.html'),
+        plantas: resolve(raiz, 'plantas.html'),
         productos: resolve(raiz, 'productos.html'),
         contacto: resolve(raiz, 'contacto.html'),
         secuenciador: resolve(raiz, 'secuenciador.html'),

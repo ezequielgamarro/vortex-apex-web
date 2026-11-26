@@ -2,11 +2,11 @@ import { PAGINAS } from '../config/paginas';
 import { enlaceWhatsApp } from '../config/contacto';
 import { IconArrowRight, IconWhatsApp } from './Icons';
 
-// Cierre de cada página interna: una sola acción, agendar la demo.
+// Cierre de cada página interna: una sola acción, agendar una reunión.
 export default function BandaCTA({
-  titulo = 'Vea la plataforma con los datos de su gasera',
+  titulo = 'Vea cómo funciona la plataforma para su gasera',
   texto,
-  whatsapp = 'Hola, quiero agendar una demostración de Vortex Apex 369.',
+  whatsapp = 'Hola, quiero agendar una reunión para conocer Vortex Apex 369.',
 }) {
   return (
     <section className="border-b border-line bg-ink-2">
@@ -15,12 +15,12 @@ export default function BandaCTA({
           <h2 className="display-lg">{titulo}</h2>
           <p className="mt-5">
             {texto ??
-              'Le mostramos Vortex Apex 369 funcionando, con sus unidades y su forma de trabajar. La demostración se agenda por WhatsApp.'}
+              'En una reunión le mostramos cómo funciona Vortex Apex 369 y cómo se adapta a sus unidades y su forma de trabajar. La reunión se agenda por WhatsApp.'}
           </p>
         </div>
         <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
           <a href={PAGINAS.contacto.href} className="btn btn-primary">
-            Agendar una demostración <IconArrowRight />
+            Agendar una reunión <IconArrowRight />
           </a>
           <a
             href={enlaceWhatsApp(whatsapp)}
